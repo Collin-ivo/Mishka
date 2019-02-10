@@ -1,0 +1,69 @@
+@import "normalize.scss";
+@import "mixins.scss";
+@import "variables.scss";
+
+body {
+  margin: auto;
+  padding: 0;
+  width: 960px;
+
+
+  font-family: $fontGlobal;
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #000000;
+
+}
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  -webkit-clip-path: inset(100%);
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+@import "blocks/button";
+@import "blocks/page-main.scss";
+@import "blocks/main-nav.scss";
+@import "blocks/page-header.scss";
+@import "blocks/logo.scss";
+@import "blocks/site-list.scss";
+@import "blocks/intro";
+@import "blocks/promo-product";
+@import "blocks/about";
+@import "blocks/reviews";
+@import "blocks/slider";
+@import "blocks/contacts";
+@import "blocks/page-footer";
+@import "blocks/social";
+@import "blocks/copyright";
+@import "blocks/page-modal";
+@import "blocks/modal-add";
+@import "blocks/make-purchase";
+@import "blocks/order-form";
+@import "blocks/catalog";
+@import "blocks/product";
+@import "blocks/manufacturing";
