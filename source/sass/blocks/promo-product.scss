@@ -1,0 +1,79 @@
+.promo-product {
+  margin: 0;
+  margin-bottom: 28px;
+  padding: 30px;
+
+  padding-bottom: 42px;
+  background-image: url("../svg/zigzag-line-desktop.svg");
+  background-repeat: repeat-x;
+  background-position: 50% 100%;
+  background-size: auto 6px;
+}
+
+.promo-product__wrapper {
+
+}
+
+.promo-product__title {
+  margin: 0;
+  padding: 0;
+
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.promo-product__product-of-week {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #63d1bb;
+}
+
+.promo-product__desc {
+  margin-bottom: 16px;
+  padding: 0;
+
+  font-size: 15px;
+  line-height: 24px;
+  color: #444444;
+}
+
+.promo-product__specifications {
+  margin: 0;
+  margin-bottom: 25px;
+  padding: 0;
+
+  width: 100%;
+
+  font-size: 15px;
+  line-height: 36px;
+  vertical-align: middle;
+  color: #444444;
+
+  & td:first-child {
+    width: 95px;
+  }
+
+  & td {
+    border-bottom: 1px solid #ececec;
+  }
+}
+
+.promo-product__image {
+  margin: 0;
+  padding: 0;
+  border: none;
+  display: block;
+}
+
+.promo-product__price {
+  margin: 0;
+  padding: 0;
+  line-height: 74px;
+  text-align: center;
+  display: block;
+  width: 100%;
+
+  color: #444444;
+  font-weight: 700;
+}

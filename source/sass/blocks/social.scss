@@ -1,0 +1,39 @@
+.social__list {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 260px;
+
+    bottom: 0;
+    left: 30px;
+
+    height: 1px;
+    background-color: #ececec;
+  }
+}
+
+.social__item {
+  margin-right: 30px;
+  &:last-child {
+    margin-right: 0;
+  }
+
+  & a {
+    display: block;
+    position: relative;
+  }
+
+  & svg {
+  }
+}

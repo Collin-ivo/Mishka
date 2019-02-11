@@ -1,0 +1,59 @@
+.about {
+  margin: 0;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.about__title {
+  margin: 0;
+  padding: 0;
+}
+
+.about__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.about__list-item {
+  position: relative;
+  margin-top: 28px;
+  padding-top: 56px;
+
+  line-height: 20px;
+  font-weight: 700;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 47px;
+    height: 37px;
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+  }
+
+  &--ecology::before {
+    background-image: url("../svg/icon-1.svg");
+  }
+  &--price::before {
+    background-image: url("../svg/icon-3.svg");
+  }
+  &--likes::before {
+    background-image: url("../svg/icon-5.svg");
+  }
+  &--handmade::before {
+    background-image: url("../svg/icon-2.svg");
+  }
+  &--russian::before {
+    background-image: url("../svg/icon-4.svg");
+  }
+  &--present::before {
+    background-image: url("../svg/icon-6.svg");
+  }
+}

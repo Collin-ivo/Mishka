@@ -1,11 +1,11 @@
-@import "normalize.scss";
+//@import "normalize.scss";
 @import "mixins.scss";
 @import "variables.scss";
 
 body {
   margin: auto;
   padding: 0;
-  width: 960px;
+  width: 320px;
 
 
   font-family: $fontGlobal;
@@ -51,6 +51,7 @@ a {
 @import "blocks/page-header.scss";
 @import "blocks/logo.scss";
 @import "blocks/site-list.scss";
+@import "blocks/second-menu";
 @import "blocks/intro";
 @import "blocks/promo-product";
 @import "blocks/about";

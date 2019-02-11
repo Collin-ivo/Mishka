@@ -1,0 +1,38 @@
+.site-list {
+  margin: 0;
+  padding: 0;
+
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #000000;
+  background-color: #ffffff;
+
+  list-style: none;
+}
+
+.site-list__item {
+  margin: 0;
+  padding-left: 76px;
+  padding-top: 28px;
+  padding-bottom: 28px;
+
+  position: relative;
+
+  border-top: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+
+  & a {
+    color: inherit;
+  }
+
+  & svg {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+
+    left: 26px;
+
+    opacity: 0.2;
+  }
+}
