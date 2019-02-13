@@ -1,7 +1,6 @@
 .reviews {
   margin: 0;
   margin-bottom: 35px;
-  padding: 30px;
   padding-bottom: 51px;
 
   background-image: url("../svg/zigzag-line-desktop.svg");
@@ -10,10 +9,19 @@
   background-size: auto 6px;
 }
 
-.reviews__list {
+.reviews__wrapper {
+  margin: auto;
+  width: 260px;
+}
+
+.reviews__title {
   margin: 0;
   padding: 0;
-  list-style: none;
+  margin-bottom: 34px;
+}
+
+.reviews__list {
+  @include reset-list;
 }
 
 .reviews__item {
@@ -24,7 +32,6 @@
 .reviews__text {
   margin: 0;
   padding: 0;
-  padding-bottom: 28px;
 
   font-size: 15px;
   line-height: 30px;
@@ -91,4 +98,92 @@
 
 .reviews__button-feedback--bottom {
   display: block;
+}
+
+@media (min-width: 768px) {
+  .reviews__wrapper {
+    width: 768px;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-origin: border-box;
+
+    background-image: url("../img/review.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    background-size: auto 100%;
+  }
+
+  .reviews__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 43px;
+    line-height: 50px;
+
+    margin-bottom: 50px;
+  }
+
+  .reviews__button-feedback--top {
+    display: block;
+    width: 175px;
+    height: 52px;
+  }
+
+  .reviews__text {
+    margin-bottom: 64px;
+  }
+
+  .reviews__inner-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .reviews__author-element {
+  }
+
+
+  .reviews__author-name {
+    line-height: 24px;
+  }
+  .reviews__author-contact {
+     display: block;
+     margin: 0;
+     padding: 0;
+     line-height: 30px;
+   }
+
+  .reviews__button-feedback--bottom {
+    display: none;
+  }
+
+  .reviews__buttons-container {
+    width: 167px;
+    margin-right: 0;
+    margin-left: auto;
+    margin-bottom: 0;
+  }
+
+  .reviews__button {
+  }
+}
+
+@media (min-width: 1250px) {
+  .reviews__wrapper {
+    width: 1050px;
+    margin: auto;
+
+    padding-top: 76px;
+    padding-bottom: 100px;
+    padding-right: 0;
+    padding-left: 175px;
+  }
+
+  .reviews__title {
+    font-size: 53px;
+  }
 }

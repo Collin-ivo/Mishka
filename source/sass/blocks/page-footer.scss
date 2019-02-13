@@ -3,15 +3,52 @@
   margin-top: 62px;
 }
 
+.page-footer__wrapper {
+  width: 320px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .page-footer__social {
   height: 80px;
 }
 
 .page-footer__copyright {
   height: 80px;
-  padding-left: 68px;
+  display: flex;
 }
 
 .page-footer__logo {
   display: none;
+}
+
+@media (min-width: 768px) {
+  .page-footer__wrapper {
+    width: 768px;
+    padding: 0 50px;
+
+    flex-direction: row;
+  }
+
+  .page-footer__logo {
+    display: block;
+    margin-left: 0;
+    margin-right: auto;
+    width: 160px;
+  }
+
+  .page-footer__copyright {
+    height: auto;
+    margin-right: 0;
+    margin-left: auto;
+  }
+}
+
+@media (min-width: 1250px) {
+  .page-footer__wrapper {
+    width: 1050px;
+    padding: 0;
+  }
 }

@@ -1,6 +1,10 @@
 .make-purchase {
-  padding-left: 30px;
-  padding-right: 30px;
+  margin: 0;
+}
+
+.make-purchase__wrapper {
+  width: 260px;
+  margin: auto;
 }
 
 .make-purchase__title {
@@ -22,4 +26,18 @@
   font-size: 13px;
   line-height: 24px;
   color: #444444;
+}
+
+@media (min-width: 768px) {
+  .make-purchase__wrapper {
+    width: 768px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media (min-width: 1250px) {
+  .make-purchase__wrapper {
+    width: 1150px;
+  }
 }

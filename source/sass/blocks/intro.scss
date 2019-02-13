@@ -1,7 +1,5 @@
 .intro__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  @include reset-list;
 }
 
 .intro__item {
@@ -58,4 +56,22 @@
     background-image: url("../svg/toy.svg");
     background-size: 60px 60px;
   }
+}
+
+@media (min-width: 768px) {
+  .intro__list {
+    display: flex;
+    width: 668px;
+    margin: auto;
+  }
+  .intro__item {
+    flex-grow: 1;
+  }
+}
+
+@media (min-width: 1250px) {
+  .intro__list {
+    width: 1050px;
+  }
+
 }

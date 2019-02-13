@@ -3,17 +3,14 @@
 @import "variables.scss";
 
 body {
-  margin: auto;
+  margin: 0;
   padding: 0;
-  width: 320px;
-
 
   font-family: $fontGlobal;
   font-size: 17px;
   line-height: 30px;
   font-weight: 400;
   color: #000000;
-
 }
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
@@ -51,7 +48,7 @@ a {
 @import "blocks/page-header.scss";
 @import "blocks/logo.scss";
 @import "blocks/site-list.scss";
-@import "blocks/second-menu";
+
 @import "blocks/intro";
 @import "blocks/promo-product";
 @import "blocks/about";

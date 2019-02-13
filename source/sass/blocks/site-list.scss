@@ -1,24 +1,20 @@
 .site-list {
-  margin: 0;
-  padding: 0;
+  @include reset-list;
 
   font-size: 17px;
   font-weight: 700;
   line-height: 24px;
   color: #000000;
-  background-color: #ffffff;
-
-  list-style: none;
 }
 
 .site-list__item {
   margin: 0;
   padding-left: 76px;
-  padding-top: 28px;
-  padding-bottom: 28px;
+  line-height: 80px;
+  height: 80px;
 
   position: relative;
-
+  background-color: #ffffff;
   border-top: 1px solid #ececec;
   border-bottom: 1px solid #ececec;
 
@@ -34,5 +30,150 @@
     left: 26px;
 
     opacity: 0.2;
+  }
+
+  &--logo {
+    padding-left: 0;
+    margin: 0;
+    border: none;
+    background-image: url("../svg/mishka-logo-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--newest {
+     display: none;
+  }
+  &--sales {
+    display: none;
+  }
+  &--shipment {
+    display: none;
+  }
+
+  z-index: 100;
+}
+
+@media (min-width:768px) {
+  .site-list {
+    padding: 0 50px;
+  }
+
+  .site-list__item {
+    line-height: 90px;
+    padding: 0;
+    order: 4;
+    border: 1px solid #ececec;
+
+    &--logo {
+      width: 300px;
+      order: 1;
+      flex-grow: 1;
+    }
+    &--search {
+      width: 82px;
+      order: 2;
+      font-size: 0;
+    }
+    &--cart {
+      width: 265px;
+      order: 3;
+      text-align: right;
+    }
+    &--catalog {
+      display: inline-block;
+      align-self: flex-start;
+      height: auto;
+
+      padding-top: 22px;
+      padding-bottom: 0;
+      margin-right: 20px;
+      line-height: 24px;
+
+      border: none;
+      background-color: transparent;
+    }
+    &--to-order {
+      display: inline-block;
+      align-self: flex-start;
+      height: auto;
+
+      padding-top: 22px;
+      padding-bottom: 0;
+      line-height: 24px;
+
+      border: none;
+      background-color: transparent;
+    }
+    &--shipment {
+      padding-top: 22px;
+      padding-bottom: 0;
+      line-height: 24px;
+      color: #444444;
+      font-weight: 400;
+
+      display: block;
+      align-self: flex-start;
+      height: auto;
+
+      margin-left: auto;
+      border: none;
+      background-color: transparent;
+    }
+  }
+}
+
+@media (min-width:1250px) {
+  .site-list {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .site-list__item {
+    height: 80px;
+    margin-right: 0;
+
+    &--catalog {
+      order: 1;
+      border: 1px solid #ececec;
+      background-color: #ffffff;
+    }
+    &--to-order {
+      order: 1;
+      border: 1px solid #ececec;
+      background-color: #ffffff;
+    }
+    &--logo {
+      order: 2;
+    }
+    &--newest {
+      display: inline-block;
+      align-self: flex-start;
+      height: auto;
+
+
+      padding-top: 22px;
+      padding-bottom: 0;
+      margin-right: 55px;
+      line-height: 24px;
+
+      border: none;
+      background-color: transparent;
+    }
+    &--sales {
+      display: inline-block;
+      align-self: flex-start;
+      height: auto;
+
+      padding-top: 22px;
+      padding-bottom: 0;
+      line-height: 24px;
+
+      border: none;
+      background-color: transparent;
+    }
+    &--shipment {
+      height: auto;
+    }
   }
 }

@@ -1,6 +1,13 @@
 .main-nav {
   padding: 0;
   margin: 0;
+  margin-bottom: 75px;
+
+  &--inner-page {
+    margin-bottom: 0;
+  }
+
+
 }
 
 .main-nav__toggle {
@@ -15,4 +22,43 @@
   text-indent: 110%;
   white-space: nowrap;
   overflow: hidden;
+}
+
+
+@media (min-width: 768px) {
+  .main-nav {
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+
+    &--inner-page {
+      margin-bottom: 0;
+    }
+
+  }
+
+  .main-nav__wrapper {
+    width: 768px;
+    margin: auto;
+  }
+
+  .main-nav__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 1250px) {
+  .main-nav {
+    margin-bottom: 75px;
+
+    &--inner-page {
+      margin-bottom: 0;
+    }
+  }
+
+  .main-nav__wrapper {
+    width: 1250px;
+    margin: auto;
+  }
 }
