@@ -1,5 +1,23 @@
 .page-main {
   margin: auto;
+  padding-top: 32px;
+  padding-bottom: 39px;
   width: 100%;
+
+  display: none;
 }
 
+@media (min-width: 768px) {
+  .page-main {
+    padding-top: 60px;
+    padding-bottom: 56px;
+  }
+
+}
+
+@media (min-width: 1250px) {
+  .page-main {
+    padding-top: 71px;
+    padding-bottom: 106px;
+  }
+}

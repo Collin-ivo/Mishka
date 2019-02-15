@@ -1,31 +1,40 @@
 .page-header {
-  margin: auto;
-  margin-bottom: 30px;
-
+  margin: 0 auto;
   padding: 0;
   width: 320px;
+
+  
   position: relative;
 
-  background-image: url("../img/hero-mobile.jpg");
-  background-repeat: no-repeat;
-  background-position: 50% 75%;
+  //background-image: url("../img/hero-mobile.jpg");
+  //background-repeat: no-repeat;
+  //background-position: 50% 80px;
 
   &--inner-page {
     margin-bottom: 0;
     background-image: none;
   }
 
-  z-index: 1;
+}
+
+.page-header__wrapper {
+
+  // box-shadow: 0 0 0 1px #ca2c37;
 }
 
 .page-header__title {
   margin: 0;
   padding: 0;
-  margin-bottom: 120px;
+  padding-top: 75px;
+  padding-bottom: 120px;
 
   text-align: center;
   font-size: 27px;
   line-height: 30px;
+
+  background-image: url("../img/hero-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
 
   &--inner-page {
     margin: 0;
@@ -43,12 +52,30 @@
 @media (min-width: 768px) {
   .page-header {
     width: 100%;
-    margin-bottom: 50px;
+    // margin-bottom: 50px;
   }
 
   .page-header__title {
-    margin-bottom: 350px;
+    width: 768px;
+    margin-top: -40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    padding-top: 154px;
+    padding-left: 130px;
+    padding-right: 130px;
+    padding-bottom: 490px;
+    background-color: #f9f9f9;
 
+    background-image: url("../img/hero-desktop.jpg");
+    background-size: cover;
+    
+    font-size: 43px;
+    line-height: 50px;
+
+    & br {
+      display: none;
+    }
     &--inner-page {
       margin-top: -46px;
       margin-bottom: 80px;
@@ -65,11 +92,37 @@
 
 @media (min-width: 1250px) {
   .page-header {
-    margin-bottom: 130px;
+    // margin-bottom: 130px;
+  }
+
+  .page-header__wrapper {
+    // background-color: darkgreen;
   }
 
   .page-header__title {
+    display: block;
+    width: 1250px;
+    margin-bottom: 0;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-image: none;
 
+    & span {
+      display: block;
+      padding-top: 154px;
+      padding-bottom: 485px;
+      padding-left: 175px;
+      padding-right: 175px;
+      background-image: url("../img/hero-desktop.jpg");
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      background-size: cover;
+
+      font-size: 53px;
+      line-height: 57px;
+    }
     &--inner-page {
       margin-bottom: 132px;
       padding-top: 100px;

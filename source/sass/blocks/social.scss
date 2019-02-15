@@ -1,26 +1,8 @@
 .social__list {
-  position: relative;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  height: 100%;
-
+  @include reset-list;
   display: flex;
   justify-content: center;
   align-items: center;
-
-  &::after {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 260px;
-
-    bottom: 0;
-    left: 30px;
-
-    height: 1px;
-    background-color: #ececec;
-  }
 }
 
 .social__item {
@@ -34,6 +16,93 @@
     position: relative;
   }
 
-  & svg {
+  &--instagramm {
+    & a {
+      width: 22px;
+      height: 21px;
+    }
+    & a::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 22px;
+      height: 21px;
+
+      background-image: url("../img/insta.png");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    
+    &:hover a::after,
+    &:focus a::after {
+      background-image: url("../img/insta-hover.png");
+    }
+
+    & a:active::after {
+      background-image: url("../img/insta-hover.png");
+      opacity: 0.3;
+    }
+  }
+
+  &--facebook {
+    & a {
+      width: 15px;
+      height: 28px;
+    }
+    & a::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 15px;
+      height: 28px;
+
+      background-image: url("../img/fb.png");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    
+    &:hover a::after,
+    &:focus a::after {
+      background-image: url("../img/fb-hover.png");
+    }
+
+    & a:active::after {
+      background-image: url("../img/fb-hover.png");
+      opacity: 0.3;
+    }
+  }
+
+  &--twitter {
+    & a {
+      width: 23px;
+      height: 20px;
+    }
+    & a::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 23px;
+      height: 20px;
+
+      background-image: url("../img/twitter.png");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &:hover a::after,
+    &:focus a::after {
+      background-image: url("../img/twitter-hover.png");
+    }
+
+    & a:active::after {
+      background-image: url("../img/twitter-hover.png");
+      opacity: 0.3;
+    }
   }
 }
