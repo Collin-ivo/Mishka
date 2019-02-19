@@ -5,21 +5,6 @@
 
   
   position: relative;
-
-  //background-image: url("../img/hero-mobile.jpg");
-  //background-repeat: no-repeat;
-  //background-position: 50% 80px;
-
-  &--inner-page {
-    margin-bottom: 0;
-    background-image: none;
-  }
-
-}
-
-.page-header__wrapper {
-
-  // box-shadow: 0 0 0 1px #ca2c37;
 }
 
 .page-header__title {
@@ -37,14 +22,13 @@
   background-position: 50% 0;
 
   &--inner-page {
-    margin: 0;
-    margin-bottom: 30px;
-    padding: 70px 40px;
+    padding: 70px 30px;
     padding-bottom: 74px;
 
     font-size: 27px;
     text-align: center;
     background-color: #f1f1f1;
+    background-image: none;
   }
 }
 
@@ -52,7 +36,24 @@
 @media (min-width: 768px) {
   .page-header {
     width: 100%;
-    // margin-bottom: 50px;
+  }
+
+  .page-header__wrapper {
+    width: 768px;
+    margin: 0 auto;
+    position: relative;
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 768px;
+      height: 24px;
+      bottom: 0;
+      background-image: url("../img/zigzag-fill-desktop.png");
+      background-repeat: no-repeat;
+      background-size: auto 24px;
+      z-index: 100;
+    }
   }
 
   .page-header__title {
@@ -77,26 +78,28 @@
       display: none;
     }
     &--inner-page {
-      margin-top: -46px;
-      margin-bottom: 80px;
-      height: 224px;
-      padding: 0;
-      padding-top: 104px;
-      vertical-align: center;
+      padding-top: 95px;
+      padding-bottom: 90px;
       font-size: 43px;
       line-height: 50px;
+      background-image: none;
     }
+  }
+
+  .page-header__intro {
+    z-index: 5;
   }
 
 }
 
 @media (min-width: 1250px) {
-  .page-header {
-    // margin-bottom: 130px;
-  }
-
   .page-header__wrapper {
-    // background-color: darkgreen;
+    width: 1250px;
+    &::after {
+      height: 34px;
+      width: 1250px;
+      background-size: auto 34px;
+    }
   }
 
   .page-header__title {
@@ -124,13 +127,17 @@
       line-height: 57px;
     }
     &--inner-page {
-      margin-bottom: 132px;
-      padding-top: 100px;
-      vertical-align: middle;
+      width: 1150px;
+      padding-top: 94px;
+      padding-bottom: 116px;
 
       font-size: 53px;
       line-height: 57px;
-      height: 250px;
+      & span {
+        display: inline-block;
+        padding: 0;
+        background-image: none;
+      }
     }
   }
 

@@ -1,16 +1,24 @@
 .page-main {
-  margin: auto;
+  margin: 0 auto;
   padding-top: 32px;
   padding-bottom: 39px;
   width: 100%;
 
-  display: none;
+  &--inner-page {
+    padding-top: 30px;
+    padding-bottom: 58px;
+  }
 }
 
 @media (min-width: 768px) {
   .page-main {
-    padding-top: 60px;
+    padding-top: 55px;
     padding-bottom: 56px;
+
+    &--inner-page {
+      padding-top: 70px;
+      padding-bottom: 63px;
+    }
   }
 
 }
@@ -19,5 +27,9 @@
   .page-main {
     padding-top: 71px;
     padding-bottom: 106px;
+
+    &--inner-page {
+      padding-top: 112px;
+    }
   }
 }

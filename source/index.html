@@ -11,11 +11,11 @@
   <header class="page-header">
     <div class="page-header__wrapper">
       <nav class="main-nav">
-        <button type="button" class="main-nav__toggle main-nav__toggle--closed">
+        <button type="button" class="main-nav__toggle main-nav__toggle--opened">
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list site-list--closed">
+          <ul class="main-nav__list site-list site-list--nojs">
             <li class="site-list__item site-list__item--logo">
               <a class="page-header__logo logo site-list__logo" href="#">
                 <!--<img class="logo__image logo__image&#45;&#45;mobile" src="svg/mishka-logo-mobile.svg" width="86" height="35"-->
@@ -106,7 +106,7 @@
                height="315" alt="Вязанные корзинки">
           </div>
           <b class="promo-product__price">Цена: 999 руб.</b>
-          <a class="promo-product__button button" href="form.html">Заказать</a>
+          <a class="promo-product__button button button--add-to-cart" href="form.html">Заказать</a>
         </div>
       </div>
     </section>
@@ -235,19 +235,29 @@
   </footer>
 
   <section class="page-modal modal-add">
-    <div class="modal-add__wrapper">
-      <h2 class="modal-add__title">Добавить в корзину</h2>
-      <b class="modal-add__intro">Выберите размер:</b>
-      <form class="modal-add__form">
-        <fieldset class="modal-add__size-list">
-          <label class="modal-add__size"><input type="radio" name="size" id="size-s">S</label>
-          <label class="modal-add__size"><input type="radio" name="size" id="size-m">M</label>
-          <label class="modal-add__size"><input type="radio" name="size" id="size-l">L</label>
-        </fieldset>
-        <button class="modal-add__button button" type="submit">Добавить</button>
-      </form>
-    </div>
-  </section>
-
+      <div class="modal-add__wrapper">
+        <form class="modal-add__form" method="post" action="https://echo.htmlacademy.ru">
+          <h2 class="modal-add__title">Добавить в корзину</h2>
+          <b class="modal-add__intro">Выберите размер:</b>
+          <ul class="modal-add__size-list">
+            <li>
+              <input class="visually-hidden" type="radio" name="size" id="size-s" value="s">
+              <label class="modal-add__size" for="size-s">S</label>
+            </li>
+            <li>
+              <input class="visually-hidden" type="radio" name="size" id="size-m" value="m">
+              <label class="modal-add__size" for="size-m">M</label>
+            </li>
+            <li>
+              <input class="visually-hidden" type="radio" name="size" id="size-l" value="l">
+              <label class="modal-add__size" for="size-l">L</label>
+            </li>
+          </ul>
+          <button class="modal-add__button button" type="submit">Добавить</button>
+        </form>
+      </div>
+    </section>
+  
+    <script src="js/script.js"></script>
 </body>
 </html>

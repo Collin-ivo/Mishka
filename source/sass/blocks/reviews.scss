@@ -101,6 +101,10 @@
 }
 
 @media (min-width: 768px) {
+.reviews {
+  background-size: 768px 17px;
+}
+
   .reviews__wrapper {
     width: 768px;
     margin: auto;
@@ -143,10 +147,6 @@
     align-items: center;
   }
 
-  .reviews__author-element {
-  }
-
-
   .reviews__author-name {
     line-height: 24px;
   }
@@ -169,10 +169,15 @@
   }
 
   .reviews__button {
+    border: none;
   }
 }
 
 @media (min-width: 1250px) {
+.reviews {
+  background-size: 1250px 24px;
+  background-repeat: no-repeat;
+}
   .reviews__wrapper {
     width: 1050px;
     margin: auto;
