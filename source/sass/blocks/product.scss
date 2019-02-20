@@ -5,7 +5,9 @@
 }
 
 .product__img {
+  display: block;
   padding: 0;
+  width: 260px;
   height: 195px;
   border: none;
   background-color: #ebebeb;
@@ -62,7 +64,7 @@
 
   .product__img {
     height: 334px;
-    width: 50%;
+    width: 334px;
   }
 
   .product__data-container {
@@ -99,7 +101,7 @@
   }
 
   .product__img {
-    width: 100%;
+    width: 316px;
     height: 462px;
   }
 

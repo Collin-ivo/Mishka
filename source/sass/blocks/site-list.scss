@@ -1,344 +1,641 @@
+// .site-list {
+//   @include reset-list;
+
+//   font-size: 17px;
+//   font-weight: 700;
+//   line-height: 24px;
+//   color: #000000;
+
+//   &--opened,
+//   &--nojs {
+//     .site-list__item {
+//       display: block;
+//     }
+
+//     .site-list__item--newest {
+//       display: none;
+//     }
+//     .site-list__item--sales {
+//       display: none;
+//     }
+//     .site-list__item--shipment {
+//       display: none;
+//     }
+//   }
+
+//   &--closed {
+//     .site-list__item {
+//       display: none;
+//     }
+
+//     .site-list__item--logo {
+//       display: block;
+//     }
+//   }
+// }
+
+// .site-list__logo {
+//   height: 80px;
+//   padding: 0;
+
+//   text-align: center;
+//   box-shadow: 0 0 0 2px red;
+
+//   & img {
+//     width: 86px;
+//     height: 80px;
+//     box-shadow: 0 0 0 1px blue; 
+//   }
+// }
+
+
+// .site-list__item {
+//   margin: 0;
+
+//   background-color: #ffffff;
+//   border-top: 1px solid #ececec;
+//   border-bottom: 1px solid #ececec;
+
+//   & a {
+//     position: relative;
+//     display: block;
+//     color: inherit;
+//     text-decoration: none;
+//     padding-top: 28px;
+//     padding-bottom: 26px;
+//     padding-left: 76px;
+
+//   }
+
+//   &--logo {
+//     padding: 0;
+//     margin: 0;
+//     border: none;
+//     box-shadow: 0 0 0 1px green;
+//     // background-image: url("../svg/mishka-logo-mobile.svg");
+//     // background-repeat: no-repeat;
+//     // background-position: center;
+//     // background-size: 86px auto;
+//     & a {
+//       padding: 0;
+//     }
+
+//     &:hover,
+//     &:focus {
+//       opacity: 0.6;
+//     }
+//     &:active {
+//       opacity: 0.3;
+//     }
+
+//   }
+
+//   & a::before {
+//     content: "";
+//     display: block;
+//     position: absolute;
+
+//     width: 76px;
+//     height: 80px;
+//     left: 0;
+//     top: 0;
+
+//     background-repeat: no-repeat;
+//     background-position: 80% center;
+//     opacity: 0.2;
+//     pointer-events: none;
+//   }
+
+//   &:hover span,
+//   &:focus span {
+//       opacity: 0.6;
+//     }
+  
+//   &:active span {
+//       opacity: 0.3;
+//     }
+
+//   &--search {
+//     & a::before {
+//       background-image: url("../img/search.png");
+//     }
+//   }
+
+//   &--cart {
+//     & a::before {
+//       background-image: url("../img/cart.png");
+//     }
+//   }
+
+//   &--search:hover,
+//   &--search:focus {
+
+//     & a::before {
+//       background-image: url("../img/search-hover.png");
+//       opacity: 1.4;
+//     }
+//   }
+//   &--cart:hover,
+//   &--cart:focus {
+//     & a::before {
+//       background-image: url("../img/cart-hover.png");
+//       opacity: 1;
+//     }
+//   }
+
+//   &--search:active {
+//     & a::before {
+//       background-image: url("../img/search-hover.png");
+//       opacity: 0.3;
+//     }
+//   }
+//   &--cart:active {
+//     & a::before {
+//       background-image: url("../img/cart-hover.png");
+//       opacity: 0.3;
+//     }
+//   }
+
+// }
+
+// // .site-list__logo {
+// //   height: 80px;
+// // }
+
+
+// @media (max-width: 768px) {
+
+// }
+
+// @media (min-width:768px) {
+//   .site-list {
+//     padding: 0 50px;
+//     display: flex;
+//     flex-wrap: wrap;
+//     align-items: top;
+
+//     box-shadow: 0 0 0 3px blueviolet;
+//   }
+
+//   .site-list__item {
+//     order: 4;
+//     border: 1px solid #ececec;
+
+//     z-index: 100;
+
+//     & a {
+//       padding-left: 0;
+//       padding-top: 30px;
+//       padding-bottom: 33px;
+//     }
+
+//     &--newest,
+//     &--sales {
+//         display: none;
+//     }
+
+//     &--logo {
+//       margin-left: -50px;
+//       padding-left: 50px;
+//       width: 300px;
+
+//       // background-image: url("../img/mishka-logo-tablet.png");
+//       // background-repeat: no-repeat;
+//       // background-position: 48px 50%;
+//       // background-size: 113px auto;
+
+//       order: 1;
+//       // flex-grow: 1;
+//       & a {
+//         padding: 0;
+//       }
+//     }
+//     &--search {
+//       width: 82px;
+//       order: 2;
+//       display: flex;
+//       align-items: center;
+//       & a {
+//         width: 100%;
+//         height: 100%;
+//         &::before {
+//           position: relative;
+//           width: auto;
+//           height: 100%;
+//           background-position: 50% 50%;
+//         }
+//       }
+//       & span {
+//         display: none;
+//       }
+//     }
+//     &--cart {
+//       margin-right: -50px;
+//       padding-right: 50px;
+//       width: 315px;
+//       order: 3;
+//       text-align: right;
+//       & a {
+//         &::before {
+//           background-position: 50% 50%;
+//         }
+//       }
+//     }
+//     &--catalog,
+//     &--to-order,
+//     &--shipment {
+//       display: block;
+//       margin-right: 35px;
+
+//       border: none;
+//       background-color: transparent;
+//       & a {
+//         padding-top: 16px;
+//         line-height: 24px;
+//         padding-bottom: 0;
+//         font-size: 15px;
+//       }
+//     }
+
+//     &--shipment {
+//       margin-left: auto;
+//       margin-right: 0;
+//       & a {
+//         color: #444444;
+//         font-weight: 400;
+//       }
+    
+//     }
+//   }
+// }
+
+// @media (min-width:1250px) {
+//   .site-list {
+//     justify-content: stretch;
+//   }
+
+//   .site-list__item {
+//     flex-grow: 0;
+
+//     &--catalog {
+//       margin-right: 0;
+//       width: 234px;
+//       order: 1;
+//       border: 1px solid #ececec;
+//       background-color: #ffffff;
+      
+//       & a {
+//         padding-left: 50px;
+//         padding-top: 30px;
+//         padding-bottom: 33px;
+//         font-size: 17px;
+//       }
+//     }
+//     &--to-order {
+//       width: auto;
+//       order: 1;
+//       border: 1px solid #ececec;
+//       border-right: none;
+//       background-color: #ffffff;
+
+//       & a {
+//         padding-left: 35px;
+//         padding-top: 30px;
+//         padding-bottom: 33px;
+//         font-size: 17px;
+//       }
+//     }
+//     &--logo {
+//       width: 300px;
+//       order: 2;
+//       // flex-grow: 1;
+
+//       // background-image: url("../img/mishka-logo-desktop.png");
+//       // background-size: 149px auto;
+//       // background-position: 47% 50%;
+//     }
+
+//     &--cart {
+//       margin-right: 0;
+//       & a {
+//         padding-top: 30px;
+//         font-size: 17px;
+//       }
+//     }
+
+//     &--newest {
+//       margin-left: 50px;
+//       display: block;
+//       align-self: flex-start;
+
+//       border: none;
+//       background-color: transparent;
+
+//       & a {
+//         width: 220px;
+//         padding-top: 16px;
+//         padding-bottom: 0;
+        
+//         font-size: 15px;
+//       }
+//     }
+//     &--sales {
+//       display: block;
+//       align-self: flex-start;
+
+//       border: none;
+//       background-color: transparent;
+
+//       & a {
+//         width: 220px;
+//         padding-top: 16px;
+//         padding-bottom: 0;
+
+//         font-size: 15px;
+//       }
+//     }
+//     &--shipment {
+//       margin-right: 50px;
+//       & a {
+//         width: 266px;
+//         padding-top: 16px;
+//         font-size: 15px;
+//         text-align: right;
+//       }
+//     }
+//   }
+// }
+
+
 .site-list {
   @include reset-list;
 
-  font-size: 17px;
-  font-weight: 700;
-  line-height: 24px;
-  color: #000000;
-
-  &--opened,
-  &--nojs {
-    .site-list__item {
-      display: block;
-    }
-
-    .site-list__item--newest {
-      display: none;
-    }
-    .site-list__item--sales {
-      display: none;
-    }
-    .site-list__item--shipment {
-      display: none;
-    }
-  }
-
-  &--closed {
-    .site-list__item {
-      display: none;
-    }
-
-    .site-list__item--logo {
-      display: block;
-    }
+  a {
+    text-decoration: none;
+    color: inherit;
   }
 }
-
 
 .site-list__item {
-  margin: 0;
-
-  background-color: #ffffff;
-  border-top: 1px solid #ececec;
-  border-bottom: 1px solid #ececec;
-
-  & a {
-    position: relative;
-    display: block;
-    color: inherit;
-    text-decoration: none;
-    padding-top: 28px;
-    padding-bottom: 26px;
+  box-shadow: 0 1px 0 #ececec;
+  a {
+    display: flex;
+    align-items: center;
+    min-height: 80px;
+    padding-top: 0;
+    padding-bottom: 0;
     padding-left: 76px;
 
-  }
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: 700;
 
-  &--logo {
+    &[href]:hover,
+    &[href]:focus {
+      opacity: 0.6;
+    }
+    &[href]:active {
+      opacity: 0.3;
+    }
+  }
+}
+
+.site-list__item--logo {
+  a {
     padding-left: 0;
-    margin: 0;
-    border: none;
-    background-image: url("../svg/mishka-logo-mobile.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 86px auto;
-
-    &:hover,
-    &:focus {
-      opacity: 0.6;
-    }
-    &:active {
-      opacity: 0.3;
-    }
-
+    justify-content: center;
   }
-
-  & a::before {
-    content: "";
-    display: block;
-    position: absolute;
-
-    width: 76px;
-    height: 80px;
-    left: 0;
-    top: 0;
-
-    background-repeat: no-repeat;
-    background-position: 80% center;
-    opacity: 0.2;
-    pointer-events: none;
-  }
-
-  &:hover span,
-  &:focus span {
-      opacity: 0.6;
-    }
-  
-  &:active span {
-      opacity: 0.3;
-    }
-
-  &--search {
-    & a::before {
-      background-image: url("../img/search.png");
-    }
-  }
-
-  &--cart {
-    & a::before {
-      background-image: url("../img/cart.png");
-    }
-  }
-
-  &--search:hover,
-  &--search:focus {
-
-    & a::before {
-      background-image: url("../img/search-hover.png");
-      opacity: 1.4;
-    }
-  }
-  &--cart:hover,
-  &--cart:focus {
-    & a::before {
-      background-image: url("../img/cart-hover.png");
-      opacity: 1;
-    }
-  }
-
-  &--search:active {
-    & a::before {
-      background-image: url("../img/search-hover.png");
-      opacity: 0.3;
-    }
-  }
-  &--cart:active {
-    & a::before {
-      background-image: url("../img/cart-hover.png");
-      opacity: 0.3;
-    }
-  }
-
 }
 
-.site-list__logo {
-  height: 80px;
+.site-list__item--newest,
+.site-list__item--sales,
+.site-list__item--shipment {
+  display: none;
 }
 
-
-@media (max-width: 768px) {
-
-}
-
-@media (min-width:768px) {
+@media (max-width: $mobile-width-only) {
   .site-list {
-    padding: 0 50px;
+
+    &--opened,
+    &--nojs {
+      .site-list__item {
+        display: block;
+      }
+
+      .site-list__item--newest {
+        display: none;
+      }
+      .site-list__item--sales {
+        display: none;
+      }
+      .site-list__item--shipment {
+        display: none;
+      }
+    }
+
+    &--closed {
+      .site-list__item {
+        display: none;
+      }
+
+      .site-list__item--logo {
+        display: block;
+      }
+    }
+  }
+}
+  
+
+@media (min-width: $tablet-width) {
+  .site-list {
     display: flex;
     flex-wrap: wrap;
-    align-items: top;
   }
 
   .site-list__item {
-    order: 4;
-    border: 1px solid #ececec;
-
-    z-index: 100;
-
-    & a {
-      padding-left: 0;
-      padding-top: 30px;
-      padding-bottom: 33px;
-    }
-
-    &--newest,
-    &--sales {
-        display: none;
-    }
-
-    &--logo {
-      margin-left: -50px;
-      padding-left: 50px;
-      width: 300px;
-
-      background-image: url("../img/mishka-logo-tablet.png");
-      background-repeat: no-repeat;
-      background-position: 48px 50%;
-      background-size: 113px auto;
-
-      order: 1;
-      flex-grow: 1;
-    }
-    &--search {
-      width: 82px;
-      order: 2;
-      display: flex;
-      align-items: center;
-      & a {
-        width: 100%;
-        height: 100%;
-        &::before {
-          position: relative;
-          width: auto;
-          height: 100%;
-          background-position: 50% 50%;
-        }
-      }
-      & span {
-        display: none;
-      }
-    }
-    &--cart {
-      margin-right: -50px;
-      padding-right: 50px;
-      width: 315px;
-      order: 3;
-      text-align: right;
-      & a {
-        &::before {
-          background-position: 50% 50%;
-        }
-      }
-    }
-    &--catalog,
-    &--to-order,
-    &--shipment {
-      display: block;
-      margin-right: 35px;
-
-      border: none;
-      background-color: transparent;
-      & a {
-        padding-top: 16px;
-        line-height: 24px;
-        padding-bottom: 0;
-        font-size: 15px;
-      }
-    }
-
-    &--shipment {
-      margin-left: auto;
-      margin-right: 0;
-      & a {
-        color: #444444;
-        font-weight: 400;
-      }
     
+    box-shadow: 0 0 0 1px #ececec;
+    
+    a {
+      min-height: 88px;
+      padding: 0;
     }
   }
+
+  .site-list__item--logo {
+    padding-left: 50px;
+    width: 370px;
+    min-height: 88px;
+    
+    a {
+      width: 113px;
+      height: auto;
+      justify-content: flex-start;
+    }
+
+    img {
+      width: 113px;
+      height: 46px;
+    }
+    
+  }
+
+  .site-list__item--search {
+    margin: 0 1px;
+    a {
+      width: 82px;
+      min-height: 88px;
+      }
+
+    span {
+      overflow: hidden;
+      text-indent: -1000px;
+    }
+    
+    
+  }
+
+  .site-list__item--cart {
+    a {
+      justify-content: flex-end;
+      margin-right: 50px;
+      width: 264px;
+    }
+    
+  }
+
+  .site-list__item--catalog,
+  .site-list__item--to-order,
+  .site-list__item--shipment {
+    box-shadow: none;
+    
+    a {
+      min-height: 42px;
+      font-size: 15px;
+      align-items: flex-end;
+    }
+  }
+
+  .site-list__item--catalog,
+  .site-list__item--to-order {
+    order: 1;
+    margin-right: 36px;
+  }
+
+  .site-list__item--catalog {
+    margin-left: 50px;
+  }
+
+  .site-list__item--shipment {
+    display: flex;
+    
+    margin-left: auto;
+    margin-right: 50px;
+    order: 1;
+    width: 265px;
+
+    a {
+      margin-left: auto;
+      color: #444444;
+      font-weight: 400;
+    }
+  }
+  
 }
 
-@media (min-width:1250px) {
+@media (min-width: $desktop-width) {
   .site-list {
-    justify-content: stretch;
+    margin: 0 50px;
   }
 
   .site-list__item {
-    flex-grow: 0;
+    order: 0;
+    display: block;
+    padding: 0;
+    margin: 0;
 
-    &--catalog {
-      margin-right: 0;
-      width: 234px;
-      order: 1;
-      border: 1px solid #ececec;
-      background-color: #ffffff;
-      
-      & a {
-        padding-left: 50px;
-        padding-top: 30px;
-        padding-bottom: 33px;
-        font-size: 17px;
-      }
+    background-color: #ffffff;
+    box-shadow: 0 0 0 1px #ececec;
+
+    a {
+      min-height: 88px;
+      align-items: center;
+
+      font-size: 17px;
     }
-    &--to-order {
-      width: auto;
-      order: 1;
-      border: 1px solid #ececec;
-      border-right: none;
-      background-color: #ffffff;
+  }
 
-      & a {
-        padding-left: 35px;
-        padding-top: 30px;
-        padding-bottom: 33px;
-        font-size: 17px;
-      }
+  .site-list__item--logo {
+    order: 1;
+  }
+
+  .site-list__item--search,
+  .site-list__item--cart,
+  .site-list__item--newest,
+  .site-list__item--sales,
+  .site-list__item--shipment {
+    order: 2;
+  }
+
+  .site-list__item--catalog {
+    padding-left: 50px;
+    a {
+      width: 184px;
     }
-    &--logo {
-      width: 300px;
-      order: 2;
-      flex-grow: 1;
+  }
 
-      background-image: url("../img/mishka-logo-desktop.png");
-      background-size: 149px auto;
-      background-position: 47% 50%;
+  .site-list__item--to-order {
+    padding-left: 35px;
+    a {
+      width: 184px;
     }
+  }
 
-    &--cart {
-      margin-right: 0;
-      & a {
-        padding-top: 30px;
-        font-size: 17px;
-      }
+  .site-list__item--logo {
+    flex-grow: 1;
+    width: auto;
+    a {
+      margin: 0 auto;
+      width: 149px;
     }
-
-    &--newest {
-      margin-left: 50px;
-      display: block;
-      align-self: flex-start;
-
-      border: none;
-      background-color: transparent;
-
-      & a {
-        width: 220px;
-        padding-top: 16px;
-        padding-bottom: 0;
-        
-        font-size: 15px;
-      }
+    img {
+      width: 149px;
+      height: 72px;
     }
-    &--sales {
-      display: block;
-      align-self: flex-start;
+  }
 
-      border: none;
-      background-color: transparent;
-
-      & a {
-        width: 220px;
-        padding-top: 16px;
-        padding-bottom: 0;
-
-        font-size: 15px;
-      }
+  .site-list__item--newest,
+  .site-list__item--sales,
+  .site-list__item--shipment {
+    background-color: transparent;
+    box-shadow: none;
+    a {
+      align-items: flex-end;
+      font-size: 15px;
+      min-height: 40px;
     }
-    &--shipment {
-      margin-right: 50px;
-      & a {
-        width: 266px;
-        padding-top: 16px;
-        font-size: 15px;
-        text-align: right;
-      }
+  }
+
+  .site-list__item--newest {
+    margin-left: 50px;
+    margin-right: 36px;
+    a {
+      width: 184px;
+    }
+  }
+
+  .site-list__item--sales {
+
+    a {
+      width: 184px;
+    }
+  }
+
+  .site-list__item--shipment {
+    margin-left: auto;
+    margin-right: 50px;
+    a {
+      justify-content: flex-end;
     }
   }
 }

@@ -75,9 +75,9 @@
   margin-right: -30px;
   margin-bottom: 30px;
 
-  background-image: url("../img/map-tablet-1x.jpg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
+  // background-image: url("../img/map-tablet-1x.jpg");
+  // background-repeat: no-repeat;
+  // background-position: 50% 50%;
 
   &::before {
     content: "";
@@ -153,7 +153,8 @@
   }
 
   .contacts__map {
-    display: none;
+    width: 768px;
+    height: 457px;
   }
 
   .contacts__button {
@@ -205,6 +206,11 @@
 
     &::before {
       left: 230px;
+    }
+
+    img {
+      width: 525px;
+      height: 457px;
     }
   }
 

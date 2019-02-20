@@ -114,10 +114,14 @@
     padding-right: 50px;
     background-origin: border-box;
 
-    background-image: url("../img/review.jpg");
+    background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
     background-position: 0 50%;
     background-size: auto 100%;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/review@2x.jpg");
+    }
   }
 
   .reviews__title {
