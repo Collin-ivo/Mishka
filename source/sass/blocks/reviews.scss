@@ -12,12 +12,13 @@
 .reviews__wrapper {
   margin: auto;
   width: 260px;
+  max-height: 578px;
 }
 
 .reviews__title {
   margin: 0;
   padding: 0;
-  margin-bottom: 34px;
+  margin-bottom: 24px;
 }
 
 .reviews__list {
@@ -31,7 +32,10 @@
 
 .reviews__text {
   margin: 0;
+  margin-bottom: 25px;
   padding: 0;
+  max-height: 270px;
+  overflow: hidden;
 
   font-size: 15px;
   line-height: 30px;
@@ -60,27 +64,16 @@
 .reviews__button {
   position: relative;
   flex-grow: 1;
-  margin: 0;
-  padding: 0;
-  width: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // text-align: center;
+  margin: auto;
+  padding: auto;
+  width: 50%;
   height: 52px;
   background-color: transparent;
   border: 1px solid #ececec;
-
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: 50% auto;
-
-  text-indent: 110%;
-  white-space: nowrap;
-  overflow: hidden;
-
-  &--next {
-    background-image: url("../svg/huge-arrow-right.svg");
-  }
-  &--prev {
-    background-image: url("../svg/huge-arrow-left.svg");
-  };
 
   &:hover,
   &:focus {
@@ -90,25 +83,34 @@
   &.disabled {
     opacity: 0.3;
   }
+  // span {
+  //   display: block;
+  //   box-shadow: 0 0 0 1px red;
+  // }
 }
 
 .reviews__button-feedback--top {
   display: none;
+  font-size: 17px;
 }
 
 .reviews__button-feedback--bottom {
   display: block;
+  font-size: 18px;
 }
 
 @media (min-width: 768px) {
 .reviews {
   background-size: 768px 17px;
+  padding-bottom: 80px;
+  margin-bottom: 63px;
 }
 
   .reviews__wrapper {
     width: 768px;
+    height: 457px;
     margin: auto;
-    padding-top: 80px;
+    padding-top: 75px;
     padding-bottom: 50px;
     padding-left: 50px;
     padding-right: 50px;
@@ -132,7 +134,7 @@
     font-size: 43px;
     line-height: 50px;
 
-    margin-bottom: 50px;
+    margin-bottom: 45px;
   }
 
   .reviews__button-feedback--top {
@@ -142,7 +144,11 @@
   }
 
   .reviews__text {
-    margin-bottom: 64px;
+    margin-bottom: 55px;
+    max-height: 120px;
+
+    font-size: 17px;
+    line-height: 30px;
   }
 
   .reviews__inner-container {
@@ -152,6 +158,7 @@
   }
 
   .reviews__author-name {
+    font-size: 18px;
     line-height: 24px;
   }
   .reviews__author-contact {
@@ -181,6 +188,7 @@
 .reviews {
   background-size: 1250px 24px;
   background-repeat: no-repeat;
+  padding-bottom: 90px;
 }
   .reviews__wrapper {
     width: 1050px;
@@ -194,5 +202,11 @@
 
   .reviews__title {
     font-size: 53px;
+    line-height: 57px;
+  }
+
+  .reviews__text {
+    height: 100px;
+    margin-bottom: 28px;
   }
 }

@@ -1,7 +1,7 @@
 .about {
   margin: 0;
   padding: 0;
-  margin-bottom: 56px;
+  margin-bottom: 16px;
 }
 
 .about__wrapper {
@@ -11,87 +11,96 @@
 
 .about__title {
   margin: 0;
+  margin-bottom: 30px;
   padding: 0;
+  font-size: 25px;
+  line-height: 30px;
 }
 
 .about__list {
   @include reset-list;
+  display: flex;
+  flex-direction: column;
 }
 
 .about__list-item {
   position: relative;
-  margin-top: 28px;
-  padding-top: 56px;
+  margin-bottom: 29px;
 
   line-height: 20px;
   font-weight: 700;
 
-  &::before {
-    content: "";
+  b {
     display: block;
-    width: 47px;
-    height: 37px;
-    position: absolute;
-
-    top: 0;
-    left: 0;
-
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: contain;
-  }
-
-  &--ecology::before {
-    background-image: url("../svg/icon-1.svg");
-  }
-  &--price::before {
-    background-image: url("../svg/icon-3.svg");
-  }
-  &--likes::before {
-    background-image: url("../svg/icon-5.svg");
-  }
-  &--handmade::before {
-    background-image: url("../svg/icon-2.svg");
-  }
-  &--russian::before {
-    background-image: url("../svg/icon-4.svg");
-  }
-  &--present::before {
-    background-image: url("../svg/icon-6.svg");
   }
 }
 
+.about__icon-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-left: -6px;
+  margin-bottom: 18px;
+  height: 38px;
+  width: 55px;
+}
+
+
 @media (min-width: 768px) {
   .about {
-    margin-bottom: 82px;
+    margin-bottom: 30px;
   }
 
   .about__wrapper {
     width: 668px;
   }
 
+  .about__title {
+    font-size: 43px;
+    line-height: 50px;
+    margin-top: -10px;
+    margin-bottom: 46px;
+  }
+
   .about__list {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .about__list-item {
     width: 330px;
     flex-grow: 1;
+    margin-bottom: 56px;
+
+    font-size: 20px;
+    line-height: 22px;
   }
 }
 
 @media (min-width: 1250px) {
   .about {
-    margin-bottom: 88px;
+    // margin-bottom: 88px;
   }
 
   .about__wrapper {
     width: 700px;
   }
 
+  .about__title {
+    font-size: 53px;
+    line-height: 57px;
+    margin-top: -15px;
+    margin-bottom: 53px;
+  }
+
   .about__list-item {
     width: 350px;
+  }
+
+  .about__icon-container {
+    margin-bottom: 18px;
   }
 }
 

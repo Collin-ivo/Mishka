@@ -16,6 +16,14 @@
   & b {
     margin-right: 30px;
   }
+  svg {
+    fill: #63d1bb;
+  }
+
+  &:hover svg,
+  &:focus svg {
+    fill: #46c1ae;
+  }
 
   &:active {
     opacity: 0.3;

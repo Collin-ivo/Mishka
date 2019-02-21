@@ -14,54 +14,38 @@
     padding-top: 26px;
     padding-bottom: 28px;
     padding-left: 28px;
+    padding-right: 28px;
     margin: 0;
 
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
     color: #ffffff;
     font-size: 19px;
     line-height: 24px;
     font-weight: 700;
     text-decoration: none;
-
-    &::after {
-    content: '';
-    position: absolute;
-    width: 62px;
-    height: 62px;
-
-    top: 28px;
-    right: 26px;
-
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    opacity: 0.5;
-    transition-duration: 0.5s;
   }
-  
-}
+  svg {
+    position: absolute;
+    right: 28px;
+    top: calc(50% - 30px);
+    opacity: 0.5;
+    fill: #149080;
+  }
 
-  &:hover a::after,
-  &:focus a::after {
+  &:hover svg,
+  &:focus svg {
     opacity: 1;
   }
   &:active {
-    & a::after {
+    & svg {
       opacity: 0.3;
     }
     & span {
       opacity: 0.3;
     }
-  }
-
-  &--interior a::after {
-    background-image: url("../svg/interior.svg");
-    background-size: 40px 62px;
-  }
-
-  &--toys a::after {
-    background-image: url("../svg/toy.svg");
-    background-size: 60px 60px;
   }
 }
 
@@ -78,7 +62,7 @@
 
     & a {
       padding-top: 29px;
-      padding-bottom: 30px;
+      padding-bottom: 42px;
       padding-left: 37px;
 
       font-size: 20px;
@@ -97,8 +81,12 @@
 
     & a {
       padding-top: 28px;
-      padding-bottom: 38px;
+      padding-bottom: 48px;
       padding-left: 37px;
+    }
+    svg {
+      right: 30px;
+      top: calc(45% - 30px);
     }
   }
 

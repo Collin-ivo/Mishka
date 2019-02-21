@@ -27,7 +27,7 @@
   padding: 0;
 
   font-size: 25px;
-  line-height: 30px;
+  line-height: 25px;
   font-weight: 700;
 }
 
@@ -43,6 +43,8 @@
 }
 
 .promo-product__desc {
+  margin: 0;
+  margin-top: 16px;
   margin-bottom: 16px;
   padding: 0;
 
@@ -101,11 +103,12 @@
 
   .promo-product__wrapper {
     width: 668px;
+    padding-bottom: 25px;
   }
 
   .promo-product__title-container {
     flex-direction: row;
-    margin-bottom: 70px;
+    margin-bottom: 60px;
     align-items: center;
   }
 
@@ -126,30 +129,35 @@
 
   .promo-product__data-container {
     width: 290px;
+    min-height: 404px;
+    display: flex;
+    flex-direction: column;
   }
 
   .promo-product__desc {
+    margin-top: -10px;
+    margin-bottom: 32px;
+
     line-height: 30px;
+    font-size: 17px;
   }
 
   .promo-product__price {
-    font-size: 24px;
+    font-size: 20px;
+    line-height: 24px;
+    margin-top: auto;
+    margin-bottom: 35px;
   }
 
   .promo-product__picture {
     position: absolute;
     bottom: 0;
     right: -379px;
-
-    width: 333px;
-    height: 404px;
-    background-color: #f1f1f1;
-    background-image: url("../img/triple-set-tablet.jpg");
-    background-repeat: no-repeat;
   }
 
   .promo-product__image {
-    display: none;
+    width: 333px;
+    height: 404px;
   }
 
   .promo-product__button {
@@ -196,7 +204,7 @@
   }
 
   .promo-product__desc {
-    margin-bottom: 64px;
+    margin-bottom: 44px;
   }
 
   .promo-product__specifications {
@@ -215,12 +223,12 @@
     bottom: 0;
     right: -583px;
 
-    width: 525px;
-    height: 636px;
     background-color: #f1f1f1;
-    background-image: url("../img/triple-set-desktop.jpg");
-    background-repeat: no-repeat;
 
     z-index: 1;
+  }
+  .promo-product__image {
+    width: 525px;
+    height: 636px;
   }
 }

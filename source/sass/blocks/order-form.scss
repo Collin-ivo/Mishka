@@ -220,6 +220,7 @@
   &--tel input:hover + svg {
     opacity: 1;
     fill: #63d1ba;
+    transition: fill 0s, opacity 0.2s;
   }
 
   &--email svg {
@@ -229,9 +230,7 @@
 
     right: 5px;
     bottom: 13px;
-    & path {
-      fill: #000000;
-    }
+
     opacity: 0.2;
   }
   &--email input:hover,
@@ -242,9 +241,8 @@
   &--email input:hover + svg,
   &--email input:focus + svg {
     opacity: 1;
-    & path {
-      fill: #62d1ba;
-    }
+    fill: #62d1ba;
+    transition: fill 0s, opacity 0.2s;
   }
 
   & label {
@@ -275,12 +273,6 @@
     background-color: #63d1bb;
   }
 }
-
-// .order-form__footnote-container {
-//   display: block;
-//   // flex-direction: column;
-//   background-color: burlywood;
-// }
 
 .order-form__footnote {
   order: 1;

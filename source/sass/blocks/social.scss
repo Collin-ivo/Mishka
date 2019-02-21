@@ -12,96 +12,18 @@
   }
 
   & a {
-    display: block;
+    display: inline-block;
     position: relative;
-  }
 
-  &--instagramm {
-    & a {
-      width: 22px;
-      height: 21px;
+    svg {
+      fill: #231f20;
     }
-    & a::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-
-      width: 22px;
-      height: 21px;
-
-      background-image: url("../img/insta.png");
-      background-repeat: no-repeat;
-      background-position: center;
+    &:hover svg,
+    &:focus svg {
+      fill: #46c1ae;
     }
-    
-    &:hover a::after,
-    &:focus a::after {
-      background-image: url("../img/insta-hover.png");
-    }
-
-    & a:active::after {
-      background-image: url("../img/insta-hover.png");
-      opacity: 0.3;
-    }
-  }
-
-  &--facebook {
-    & a {
-      width: 15px;
-      height: 28px;
-    }
-    & a::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-
-      width: 15px;
-      height: 28px;
-
-      background-image: url("../img/fb.png");
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-    
-    &:hover a::after,
-    &:focus a::after {
-      background-image: url("../img/fb-hover.png");
-    }
-
-    & a:active::after {
-      background-image: url("../img/fb-hover.png");
-      opacity: 0.3;
-    }
-  }
-
-  &--twitter {
-    & a {
-      width: 23px;
-      height: 20px;
-    }
-    & a::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-
-      width: 23px;
-      height: 20px;
-
-      background-image: url("../img/twitter.png");
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-
-    &:hover a::after,
-    &:focus a::after {
-      background-image: url("../img/twitter-hover.png");
-    }
-
-    & a:active::after {
-      background-image: url("../img/twitter-hover.png");
+    &:active svg {
+      fill: #46c1ae;
       opacity: 0.3;
     }
   }

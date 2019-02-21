@@ -60,6 +60,14 @@
     margin-left: 0;
     margin-right: auto;
     width: 180px;
+
+    &:hover svg,
+    &:focus svg {
+      fill: #46c1ae;
+    }
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   .page-footer__copyright {

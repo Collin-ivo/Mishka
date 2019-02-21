@@ -2,6 +2,13 @@
   border: 1px solid #ececec;
   display: flex;
   flex-direction: column;
+
+  &:hover {
+    box-shadow: 0 6px 10px rgba($color: #000000, $alpha: 0.1)
+  }
+  &:active {
+    box-shadow: 0 3px 5px rgba($color: #000000, $alpha: 0.1)
+  }
 }
 
 .product__img {
@@ -26,6 +33,14 @@
   font-size: 17px;
   line-height: 24px;
   font-weight: 700;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .product__spec-wrapper {
@@ -53,6 +68,25 @@
   font-size: 15px;
   font-weight: 700;
   line-height: 24px;
+}
+
+.product__button {
+  svg {
+    opacity: 0.2;
+  }
+
+  &:hover svg,
+  &:focus svg {
+  fill: #63d1bb;
+  opacity: 1;
+  
+  transition: fill 0s, opacity 0.2s;
+  }
+  &:active svg {
+    fill: #63d1bb;
+    opacity: 0.3;
+    // transition: fill 0.2s, opacity 0.1s;
+  }
 }
 
 @media (min-width: 768px) {
