@@ -25,6 +25,10 @@
 
   z-index: 2;
 
+  &--nojs {
+    display: none;
+  }
+
   &--closed::before {
     content: "";
     display: block;

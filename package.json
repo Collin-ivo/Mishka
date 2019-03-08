@@ -5,9 +5,12 @@
   "description": "Уучебный проект Мишка",
   "main": "gulpfile.js",
   "dependencies": {
+    "gulp-posthtml": "^3.0.4",
     "gulp-sass": "^4.0.2",
     "node-sass": "^4.11.0",
-    "svgo": "^1.1.1"
+    "posthtml-include": "^1.2.0",
+    "svgo": "^1.1.1",
+    "svgxuse": "^1.2.6"
   },
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
@@ -19,15 +22,18 @@
     "gulp-htmlmin": "^5.0.1",
     "gulp-plumber": "1.2.x",
     "gulp-postcss": "^8.0.0",
+    "gulp-posthtml": "3.0.4",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "4.0.x",
     "gulp-uglify": "^3.0.1",
     "postcss-reporter": "^6.0.0",
     "postcss-scss": "^2.0.0",
+    "posthtml-include": "1.2.x",
     "pump": "^3.0.0",
     "stylelint": "^9.6.0",
     "stylelint-config-htmlacademy": "0.1.x",
-    "uglify-js": "^3.4.9"
+    "uglify-js": "^3.4.9",
+    "svgxuse": "1.2.6"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",

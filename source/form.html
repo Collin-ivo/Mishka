@@ -4,15 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Оформить заказ. Интернет магазин - Мишка</title>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
 <header class="page-header page-header--inner-page">
   <div class="page-header__wrapper">
     <nav class="main-nav">
-        <button type="button" class="main-nav__toggle main-nav__toggle--opened">
+        <button type="button" class="main-nav__toggle main-nav__toggle--nojs">
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <div class="main-nav__wrapper">
@@ -190,30 +189,6 @@
       </div>
     </div>
   </footer>
-
-  <section class="page-modal modal-add">
-    <div class="modal-add__wrapper">
-      <form class="modal-add__form" method="post" action="https://echo.htmlacademy.ru">
-        <h2 class="modal-add__title">Добавить в корзину</h2>
-        <b class="modal-add__intro">Выберите размер:</b>
-        <ul class="modal-add__size-list">
-          <li>
-            <input class="visually-hidden" type="radio" name="size" id="size-s" value="s">
-            <label class="modal-add__size" for="size-s">S</label>
-          </li>
-          <li>
-            <input class="visually-hidden" type="radio" name="size" id="size-m" value="m">
-            <label class="modal-add__size" for="size-m">M</label>
-          </li>
-          <li>
-            <input class="visually-hidden" type="radio" name="size" id="size-l" value="l">
-            <label class="modal-add__size" for="size-l">L</label>
-          </li>
-        </ul>
-        <button class="modal-add__button button" type="submit">Добавить</button>
-      </form>
-    </div>
-  </section>
   
   <script src="js/script.js"></script>
 </body>

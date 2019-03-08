@@ -33,6 +33,8 @@
   font-size: 17px;
   line-height: 24px;
   font-weight: 700;
+  color: inherit;
+  text-decoration: none;
 
   &:hover,
   &:focus {
@@ -79,7 +81,7 @@
   &:focus svg {
   fill: #63d1bb;
   opacity: 1;
-  
+
   transition: fill 0s, opacity 0.2s;
   }
   &:active svg {

@@ -3,7 +3,7 @@
   margin-bottom: 35px;
   padding-bottom: 51px;
 
-  background-image: url("../svg/zigzag-line-desktop.svg");
+  background-image: url("../img/bg-zigzag-line.svg");
   background-repeat: repeat-x;
   background-position: 50% 100%;
   background-size: auto 6px;
@@ -67,7 +67,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  // text-align: center;
   margin: auto;
   padding: auto;
   width: 50%;
@@ -83,10 +82,6 @@
   &.disabled {
     opacity: 0.3;
   }
-  // span {
-  //   display: block;
-  //   box-shadow: 0 0 0 1px red;
-  // }
 }
 
 .reviews__button-feedback--top {
@@ -117,6 +112,7 @@
     background-origin: border-box;
 
     background-image: url("../img/review@1x.jpg");
+    background-color: #f9f9f9;
     background-repeat: no-repeat;
     background-position: 0 50%;
     background-size: auto 100%;
@@ -162,11 +158,11 @@
     line-height: 24px;
   }
   .reviews__author-contact {
-     display: block;
-     margin: 0;
-     padding: 0;
-     line-height: 30px;
-   }
+    display: block;
+    margin: 0;
+    padding: 0;
+    line-height: 30px;
+  }
 
   .reviews__button-feedback--bottom {
     display: none;

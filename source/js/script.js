@@ -23,7 +23,7 @@
 
     navMenu.classList.remove("site-list--nojs");
     navMenu.classList.add("site-list--closed");
-    navToggle.classList.remove("main-nav__toggle--opened");
+    navToggle.classList.remove("main-nav__toggle--nojs");
     navToggle.classList.add("main-nav__toggle--closed");
     
     navToggle.addEventListener("click", function (evt) {

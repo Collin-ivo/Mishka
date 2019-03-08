@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Интернет магазин - Мишка</title>
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" href="css/style.min.css" as="style">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
   <header class="page-header">
     <div class="page-header__wrapper">
       <nav class="main-nav">
-        <button type="button" class="main-nav__toggle main-nav__toggle--opened">
+        <button type="button" class="main-nav__toggle main-nav__toggle--nojs">
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <div class="main-nav__wrapper">
@@ -120,6 +120,10 @@
           </table>
           <div class="promo-product__picture">
             <picture>
+              <source type="image/webp" media="(min-width: 1250px)" srcset="img/triple-set-desktop@1x.webp" srcset="img/triple-set-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.webp" srcset="img/triple-set-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/triple-set-mobile@1x.webp" srcset="img/triple-set-mobile@2x.webp 2x">
+
               <source media="(min-width: 1250px)" srcset="img/triple-set-desktop@1x.jpg" srcset="img/triple-set-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg" srcset="img/triple-set-tablet@2x.jpg 2x">
               <img class="promo-product__image" src="img/triple-set-mobile@1x.jpg" 
@@ -196,7 +200,7 @@
               </div>
               <div class="reviews__buttons-container">
                 <a class="reviews__button reviews__button--prev disabled" aria-label="Назад">
-                  <span><svg height="26" width="50"><use xlink:href="img/sprite-icons.svg#icon-left-arrow"></use></svg></span>
+                  <svg height="26" width="50"><use xlink:href="img/sprite-icons.svg#icon-left-arrow"></use></svg>
                 </a>
                 <a class="reviews__button reviews__button--next" aria-label="Вперед">
                   <svg height="26" width="50"><use xlink:href="img/sprite-icons.svg#icon-right-arrow"></use></svg>
@@ -240,6 +244,10 @@
         </ul>
         <div class="contacts__map-container">
           <picture>
+              <source type="image/webp" media="(min-width: 1250px)" srcset="img/map-desktop@1x.webp" srcset="img/map-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet@1x.webp" srcset="img/map-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/map-mobile@1x.webp" srcset="img/map-mobile@2x.webp 2x">
+
               <source media="(min-width: 1250px)" srcset="img/map-desktop@1x.jpg" srcset="img/map-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg" srcset="img/map-tablet@2x.jpg 2x">
               <img class="contacts__map" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" width="320" height="457"
@@ -292,29 +300,30 @@
   
 
   <section class="page-modal modal-add">
-      <div class="modal-add__wrapper">
-        <form class="modal-add__form" method="post" action="https://echo.htmlacademy.ru">
-          <h2 class="modal-add__title">Добавить в корзину</h2>
-          <b class="modal-add__intro">Выберите размер:</b>
-          <ul class="modal-add__size-list">
-            <li>
-              <input class="visually-hidden" type="radio" name="size" id="size-s" value="s">
-              <label class="modal-add__size" for="size-s">S</label>
-            </li>
-            <li>
-              <input class="visually-hidden" type="radio" name="size" id="size-m" value="m">
-              <label class="modal-add__size" for="size-m">M</label>
-            </li>
-            <li>
-              <input class="visually-hidden" type="radio" name="size" id="size-l" value="l">
-              <label class="modal-add__size" for="size-l">L</label>
-            </li>
-          </ul>
-          <button class="modal-add__button button" type="submit">Добавить</button>
-        </form>
-      </div>
-    </section>
-  
-    <script src="js/script.js"></script>
+    <div class="modal-add__wrapper">
+      <form class="modal-add__form" method="post" action="https://echo.htmlacademy.ru">
+        <h2 class="modal-add__title">Добавить в корзину</h2>
+        <b class="modal-add__intro">Выберите размер:</b>
+        <ul class="modal-add__size-list">
+          <li>
+            <input class="visually-hidden" type="radio" name="size" id="size-s" value="s">
+            <label class="modal-add__size" for="size-s">S</label>
+          </li>
+          <li>
+            <input class="visually-hidden" type="radio" name="size" id="size-m" value="m">
+            <label class="modal-add__size" for="size-m">M</label>
+          </li>
+          <li>
+            <input class="visually-hidden" type="radio" name="size" id="size-l" value="l">
+            <label class="modal-add__size" for="size-l">L</label>
+          </li>
+        </ul>
+        <button class="modal-add__button button" type="submit">Добавить</button>
+      </form>
+    </div>
+  </section>
+    
+  <script src="js/plugins/svgxuse.min.js" defer></script>
+  <script src="js/script.js" defer></script>
 </body>
 </html>
